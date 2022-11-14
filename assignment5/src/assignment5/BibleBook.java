@@ -15,7 +15,11 @@ public class BibleBook
 					String line = fileIn.nextLine();
 					String array[] = line.split(":");
 					
-					System.out.println("Book name: " + array[0] + "(" + array[1] + " chapters) - " + array[2]);
+						String book = array[0];
+						int chapters = Integer.parseInt(array[1]);
+						String summary = array[2];
+				
+					System.out.println("Book name: " + book + "(" + chapters + " chapters) - " + summary);
 				}
 				fileIn.close();
 			}
